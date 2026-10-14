@@ -56,7 +56,7 @@ a TUI client tracks viewed completions independently, so its sidebar may differ.
 Comments and CI/feedback changes do not reset group age. Local clocks persist
 across opens; a different branch starts a new observation. Seconds appear only
 below one minute. Hours/days include a nonzero second unit without padding:
-`59s`, `1m`, `1h`, `1h3m`, `1d`, `1d2h`—never `1h0m` or `1d0h`.
+`59s`, `1m`, `1h`, `1h3m`, `1d`, `1d2h`; never `1h0m` or `1d0h`.
 
 ## When does data refresh?
 
@@ -74,12 +74,12 @@ Incomplete readiness data never yields ready.
 ## What private content is stored?
 
 > [!WARNING]
-> PR titles, status, descriptions, reviews, and comments—including private
-> repository content—are cached locally. Tokens and navigation links are not.
+> PR titles, status, descriptions, reviews, and comments are cached locally,
+> including private repository content. Tokens and navigation links are not.
 
 GitHub caches are isolated by authentication token. Local first-seen clocks are
 independent of authentication and store only timestamps/schema data under hashed
-worktree/branch filenames—not identifying names or paths.
+worktree/branch filenames, with no identifying names or paths.
 
 Delete the [cache directory](../README.md#privacy-and-cache) to clear content and
 local clocks. GitHub entries older than seven days are ignored, not automatically

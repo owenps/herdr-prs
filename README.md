@@ -57,7 +57,7 @@ your existing command-bar binding can stay unchanged.
 ## Your work
 
 Your open PRs across GitHub, plus feature-branch work and linked PRs from the
-active Herdr session—including work without a PR.
+active Herdr session, including work without a PR.
 
 | Group | Work |
 | --- | --- |
@@ -67,7 +67,7 @@ active Herdr session—including work without a PR.
 | Cancelled | Closed, unmerged PRs |
 
 `↗` marks a PR with an existing navigation target; `*` marks your current checkout.
-Ages show time in the group, approximate for local work—not last activity.
+Ages show time in the group, not last activity. Local ages are approximate.
 Native Nord sidebar dots show agent attention: amber `●` working, teal `●`
 unread, green `○` idle; red `●` blocked and dim `·` unknown. Work without an
 agent has no icon. The icon represents the preferred navigation worktree.
@@ -77,20 +77,20 @@ agent has no icon. The icon represents the preferred navigation worktree.
 ## Controls
 
 Wide terminals (100+ columns) show a right-hand preview; narrower terminals use
-fullscreen details. <kbd>Tab ⇥</kbd> changes focus; typing from details returns to search.
+fullscreen details. <kbd>⇥ Tab</kbd> changes focus; typing from details returns to search.
 
 | Key | Action |
 | --- | --- |
 | Type | Fuzzy search |
 | <kbd>↑</kbd> / <kbd>↓</kbd>, <kbd>PgUp</kbd> / <kbd>PgDn</kbd>, <kbd>Home</kbd> / <kbd>End</kbd> | Select work; scroll focused details |
-| <kbd>Tab ⇥</kbd> | Switch list / preview focus in wide layout |
-| <kbd>⇧</kbd> + <kbd>Tab ⇥</kbd> | Cycle All → Done → In Review → In Progress → Cancelled |
-| <kbd>Enter ↵</kbd> | From list: jump to existing target; unlinked work opens details |
+| <kbd>⇥ Tab</kbd> | Switch list / preview focus in wide layout |
+| <kbd>⇧</kbd> + <kbd>⇥ Tab</kbd> | Cycle All → Done → In Review → In Progress → Cancelled |
+| <kbd>⏎ Enter</kbd> | From list: jump to existing target; unlinked work opens details |
 | <kbd>Ctrl</kbd> + <kbd>D</kbd> | Toggle fullscreen details |
 | <kbd>Ctrl</kbd> + <kbd>O</kbd> | Open PR in browser; no action for local work |
 | <kbd>Ctrl</kbd> + <kbd>R</kbd> | Refresh/retry catalog and selected details, bypassing cache TTL |
-| <kbd>Esc ⎋</kbd> | Return to list from details; otherwise close |
-| <kbd>Backspace ⌫</kbd> | Edit search; when empty, return from details or close |
+| <kbd>Esc</kbd> | Return to list from details; otherwise close |
+| <kbd>⌫ Backspace</kbd> | Edit search; when empty, return from details or close |
 
 Cached data appears immediately and refreshes as needed. Failed refreshes keep
 available data and show warnings. **No automatic GitHub polling**; ages tick and
@@ -101,8 +101,8 @@ Navigation revalidates the target checkout and branch before focusing it.
 ## Privacy and cache
 
 > [!WARNING]
-> PR titles, descriptions, reviews, and comments—including private-repository
-> content—are cached locally. Tokens are never stored. GitHub caches are isolated
+> PR titles, descriptions, reviews, and comments are cached locally, including
+> private-repository content. Tokens are never stored. GitHub caches are isolated
 > by authentication token; navigation links always come from current discovery.
 
 | Platform | Cache directory |
