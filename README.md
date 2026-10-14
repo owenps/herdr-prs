@@ -66,11 +66,9 @@ active Herdr session, including work without a PR.
 | In Progress | Draft PRs and local work without a PR |
 | Cancelled | Closed, unmerged PRs |
 
-`↗` marks a PR with an existing navigation target; `*` marks your current checkout.
-Ages show time in the group, not last activity. Local ages are approximate.
-Native Nord sidebar dots show agent attention: amber `●` working, teal `●`
-unread, green `○` idle; red `●` blocked and dim `·` unknown. Work without an
-agent has no icon. The icon represents the preferred navigation worktree.
+`↗` jump available · `*` current checkout · colored dots: Herdr agent status.
+
+Ages show time in the group; local ages are approximate.
 
 [Questions about missing PRs, ages, or refresh? →](docs/faq.md)
 
@@ -100,7 +98,7 @@ Navigation revalidates the target checkout and branch before focusing it.
 
 ## Privacy and cache
 
-> [!WARNING]
+> [!NOTE]
 > PR titles, descriptions, reviews, and comments are cached locally, including
 > private-repository content. Tokens are never stored. GitHub caches are isolated
 > by authentication token; navigation links always come from current discovery.
@@ -123,10 +121,6 @@ without authentication:
 make demo        # terminal UI
 make demo-popup  # Work popup inside Herdr
 ```
-
-> [!TIP]
-> For recording, browse the groups, search `settings`, then Tab into the preview
-> and scroll. Use a wider terminal for side-by-side details.
 
 Both demos disable navigation/browser actions and skip GitHub and real checkout
 discovery. `demo-popup` builds and links this local plugin; it does not edit
