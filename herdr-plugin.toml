@@ -1,0 +1,33 @@
+id = "herdr-prs"
+name = "PRs"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Pull request command bar: fuzzy-jump to worktrees, track review feedback and checks."
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["sh", "scripts/build.sh"]
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "open"
+title = "Work"
+description = "Find a PR, inspect feedback, or jump to its worktree"
+contexts = ["global"]
+command = ["./bin/herdr-prs", "--open"]
+
+[[panes]]
+id = "picker"
+title = "Work"
+placement = "popup"
+width = "74%"
+height = "62%"
+command = ["./bin/herdr-prs"]
+
+[[panes]]
+id = "demo"
+title = "Work"
+placement = "popup"
+width = "74%"
+height = "62%"
+command = ["./bin/herdr-prs", "--demo"]
